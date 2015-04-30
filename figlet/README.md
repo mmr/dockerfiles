@@ -1,11 +1,9 @@
-aafire
+figlet + lolcat
 =====
-
-Nostalgia mode on: ASCII Art Fire!
 
 Usage:
 ---
 
 ```bash
-docker run mribeiro/aafire
+docker run -t mribeiro/figlet Hell No
 ```
