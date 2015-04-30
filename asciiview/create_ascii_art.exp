@@ -9,6 +9,7 @@
 
 set image [lindex $argv 0]
 set font [lindex $argv 1]
+set output_file [lindex $argv 2]
 eval spawn asciiview -driver curses $image
-send "s1\r\rgenerated-ascii-art\r${font}8yq"
+send "s1\r\r${output_file}\r${font}8yq"
 interact
