@@ -10,4 +10,4 @@ cows=($(find /usr/share/cowsay/cows -name '*.cow'))
 random_idx=$[RANDOM % ${#cows[*]}]
 random_cow="${cows[$random_idx]}"
 
-cowsay -f $random_cow "$text" | /usr/games/lolcat
+/usr/games/cowsay -f $random_cow "$text" | /usr/games/lolcat
