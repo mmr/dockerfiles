@@ -1,0 +1,14 @@
+#!/usr/bin/expect --
+
+#
+# Expect script to automate generation of ascii art from
+# image using asciiview.
+# @author Marcio Ribeiro <mmr@b1n.org>
+# @created Apr 2015
+#
+
+set image [lindex $argv 0]
+set font [lindex $argv 1]
+eval spawn asciiview -driver curses $image
+send "s1\r\rgenerated-ascii-art\r${font}8yq"
+interact
