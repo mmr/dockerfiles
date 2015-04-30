@@ -7,6 +7,7 @@
 
 image=$1
 font=$[RANDOM % 9]
+output_file=/tmp/generated-ascii-art
 
-/usr/bin/create_ascii_art.exp $image $font &> /dev/null && \
-	cat generated-ascii-art.txt | lolcat
+/usr/bin/create_ascii_art.exp $image $font $output_file &> /dev/null && \
+	/usr/games/lolcat ${output_file}.txt
