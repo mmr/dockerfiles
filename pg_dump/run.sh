@@ -39,3 +39,5 @@ if ! [ -z "$gzip" ]; then
     echo "Compressing $out_file..."
     gzip -9 "$out_file"
 fi
+
+exit 0
