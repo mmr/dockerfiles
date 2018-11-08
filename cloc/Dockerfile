@@ -1,9 +1,7 @@
-FROM debian:jessie
+FROM alpine
 MAINTAINER Marcio Ribeiro <binary@b1n.org>
 
-RUN apt-get update && apt-get install -y \
-  cloc \
-  --no-install-recommends
+RUN apk add cloc --no-cache
 
 WORKDIR /data
 VOLUME "/data"
